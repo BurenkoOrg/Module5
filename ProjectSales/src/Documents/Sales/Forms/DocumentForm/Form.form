@@ -253,6 +253,10 @@
       <dataPath xsi:type="form:DataPath">
         <segments>Объект.Goods.Count</segments>
       </dataPath>
+      <handlers>
+        <event>OnChange</event>
+        <name>GoodsCountПриИзменении</name>
+      </handlers>
       <extendedTooltip>
         <name>GoodsCountРасширеннаяПодсказка</name>
         <id>28</id>
@@ -303,6 +307,10 @@
       <dataPath xsi:type="form:DataPath">
         <segments>Объект.Goods.Cost</segments>
       </dataPath>
+      <handlers>
+        <event>OnChange</event>
+        <name>GoodsCostПриИзменении</name>
+      </handlers>
       <extendedTooltip>
         <name>GoodsCostРасширеннаяПодсказка</name>
         <id>31</id>
@@ -566,21 +574,20 @@
     <enableDrag>true</enableDrag>
     <fileDragMode>AsFileRef</fileDragMode>
   </items>
-  <items xsi:type="form:Decoration">
-    <name>СуммаДокумента</name>
-    <id>37</id>
-    <title>
-      <key>ru</key>
-      <value>Итого:</value>
-    </title>
+  <items xsi:type="form:FormField">
+    <name>GoodsИтогSum</name>
+    <id>40</id>
     <visible>true</visible>
     <enabled>true</enabled>
     <userVisible>
       <common>true</common>
     </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>Объект.Goods.TotalSum</segments>
+    </dataPath>
     <extendedTooltip>
-      <name>СуммаДокументаРасширеннаяПодсказка</name>
-      <id>39</id>
+      <name>GoodsИтогSumРасширеннаяПодсказка</name>
+      <id>42</id>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
@@ -594,8 +601,8 @@
       </extInfo>
     </extendedTooltip>
     <contextMenu>
-      <name>СуммаДокументаКонтекстноеМеню</name>
-      <id>38</id>
+      <name>GoodsИтогSumКонтекстноеМеню</name>
+      <id>41</id>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
@@ -603,11 +610,14 @@
       </userVisible>
       <autoFill>true</autoFill>
     </contextMenu>
-    <type>Label</type>
-    <autoMaxWidth>true</autoMaxWidth>
-    <autoMaxHeight>true</autoMaxHeight>
-    <extInfo xsi:type="form:LabelDecorationExtInfo">
-      <horizontalAlign>Left</horizontalAlign>
+    <type>LabelField</type>
+    <editMode>Enter</editMode>
+    <showInHeader>true</showInHeader>
+    <headerHorizontalAlign>Left</headerHorizontalAlign>
+    <showInFooter>true</showInFooter>
+    <extInfo xsi:type="form:LabelFieldExtInfo">
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
     </extInfo>
   </items>
   <autoCommandBar>
