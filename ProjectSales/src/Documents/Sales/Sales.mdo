@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e6b81a8c-1988-4fb5-8958-9db697f8ec23">
+  <producedTypes>
+    <objectType typeId="5a5130f1-c66e-42ca-a625-1c92dd3dcbfd" valueTypeId="6774541d-5097-406a-b56b-0ce8343bdbd4"/>
+    <refType typeId="71d68574-4c9e-4e7e-9fff-db26be4d37ad" valueTypeId="800ae1fa-5d4b-49a4-a795-04881ce83f11"/>
+    <selectionType typeId="90912189-6ad6-496b-ba79-c0e9c0a1ba26" valueTypeId="266b07aa-cb19-4cf7-939d-7e0436bb4f20"/>
+    <listType typeId="f0c2759d-3113-4868-9d40-b834ba5906ca" valueTypeId="ff281b57-0977-4f74-bdbe-55c1a926166e"/>
+    <managerType typeId="ad1ac63e-b40e-483b-8179-f61398f0cace" valueTypeId="41a9fb26-6b31-4c6f-b389-b841da09087a"/>
+  </producedTypes>
+  <name>Sales</name>
+  <synonym>
+    <key>ru</key>
+    <value>Sales</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.Sales.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.Sales.Form.DocumentForm</defaultObjectForm>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <forms uuid="9fa72f07-c5c9-4e3f-bc28-21a50d663b08">
+    <name>DocumentForm</name>
+    <synonym>
+      <key>ru</key>
+      <value>Document form</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="f78fd66d-307f-44cb-b6c3-ef73296c9a84">
+    <producedTypes>
+      <objectType typeId="a60612d1-070d-4a91-b3d2-5705e8eb7055" valueTypeId="aefdbf8a-b08a-46e0-bc49-f7d3b1d1d322"/>
+      <rowType typeId="ad9a5595-ce34-48ca-812c-89652f46f28b" valueTypeId="d10a99d2-7529-4646-862a-db2eea053308"/>
+    </producedTypes>
+    <name>Goods</name>
+    <synonym>
+      <key>ru</key>
+      <value>Goods</value>
+    </synonym>
+    <attributes uuid="f4a3ee98-e7a9-4060-8988-ff0a81203737">
+      <name>Good</name>
+      <synonym>
+        <key>ru</key>
+        <value>Good</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Goods</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="a0778a19-c91f-41a2-8809-5fdfb0bf124c">
+      <name>Count</name>
+      <synonym>
+        <key>ru</key>
+        <value>Count</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="eccd4463-60c6-4ab1-866d-29b126cc49ed">
+      <name>Cost</name>
+      <synonym>
+        <key>ru</key>
+        <value>Cost</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="0c336096-8c8f-4933-8ed0-e2e1e796a7a5">
+      <name>Sum</name>
+      <synonym>
+        <key>ru</key>
+        <value>Sum</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>
